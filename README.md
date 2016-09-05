@@ -1,4 +1,4 @@
-# README
+# TO DO APP RAILS
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -13,9 +13,24 @@ Things you may want to cover:
 
 * Database creation
 
-* Database initialization
+Create to_do_test and to_do_development databases
+```
+$ rake db:create
+```
 
 * How to run the test suite
+
+
+* How to start the rails server
+
+Start
+```
+$ rails server
+```
+View the default page served by navigating to:
+```
+localhost:3000
+```
 
 * Services (job queues, cache servers, search engines, etc.)
 
