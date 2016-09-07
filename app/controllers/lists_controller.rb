@@ -26,7 +26,6 @@ class ListsController < ApplicationController
 
   def edit
     @list = List.find(params[:id])
-    render :edit
   end
 
   def update
