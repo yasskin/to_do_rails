@@ -17,7 +17,16 @@ Create to_do_test and to_do_development databases
 ```
 $ rake db:create
 ```
-
+```
+$ rake db:migrate
+```
+```
+$ rake db:test:prepare
+```
+In a new terminal, start the postgres server:
+```
+$ postgres
+```
 * How to run the test suite
 
 
