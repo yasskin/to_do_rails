@@ -12,6 +12,10 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
+In a new terminal, start the postgres server:
+```
+$ postgres
+```
 
 Create to_do_test and to_do_development databases
 ```
@@ -23,10 +27,7 @@ $ rake db:migrate
 ```
 $ rake db:test:prepare
 ```
-In a new terminal, start the postgres server:
-```
-$ postgres
-```
+
 * How to run the test suite
 
 

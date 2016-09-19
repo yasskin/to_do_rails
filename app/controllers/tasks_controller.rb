@@ -9,7 +9,10 @@ class TasksController < ApplicationController
     @task = @list.tasks.new(task_params)
     if @task.save
       flash[:notice] = "Task successfully added!"
-      redirect_to list_path(@task.list)
+      respond_to do |format|
+        format.html { redirect_to list_path(@task.list) }
+        format.js
+      end
     else
       render :new
     end
