@@ -1,6 +1,6 @@
 <% content_for(:title, "Lists | To Do") %>
 <% content_for(:navbar) do %>
-<li><a href="/">Home</a></li>
+<li><%= link_to "Home", root_path %></li>
 <li><a href="/lists">To Do App</a></li>
 <li><a href="/lists/new">New List</a></li>
 <% end %>
@@ -13,6 +13,8 @@
     <li><%= link_to list.name, list_path(list) %></li>
   <% end %>
 </ul>
-<%= link_to "New List", new_list_path %>
+
+<%= link_to "New List", new_list_path, id: "new_list_link", class: "btn btn-default", remote: true %>
+
 <hr>
 <%= image_tag "rollercoaster.jpeg" %>

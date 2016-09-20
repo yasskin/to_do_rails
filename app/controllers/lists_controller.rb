@@ -1,4 +1,5 @@
 class ListsController < ApplicationController
+
   def index
     @lists = List.all
     render :index
@@ -11,7 +12,10 @@ class ListsController < ApplicationController
 
   def new
     @list = List.new
-    render :new
+    respond_to do |format|
+      format.html { render :new }
+      format.js
+    end
   end
 
   def create
@@ -26,6 +30,10 @@ class ListsController < ApplicationController
 
   def edit
     @list = List.find(params[:id])
+    respond_to do |format|
+      format.html { render :edit }
+      format.js
+    end
   end
 
   def update

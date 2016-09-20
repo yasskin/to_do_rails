@@ -15,7 +15,7 @@
     <% @list.tasks.each do |task| %>
       <li>
         <%= task.description %> |
-        <%= link_to "Edit", edit_list_task_path(@list, task) %> |
+        <%= link_to "Edit", edit_list_task_path(@list, task), id: "edit_task_link", remote: true %> |
         <%= link_to "Delete", list_task_path(@list, task),
                                  :data => {:confirm => "Are you sure?",
                                                 :method => "delete"} %>
@@ -27,7 +27,10 @@
 <% end %>
 
 <p><%= link_to "Add a task", new_list_task_path(@list), id: "new_task_link", class: "btn btn-default", remote: true %></p>
-<p><%= link_to "Edit a List", edit_list_path(@list), class: "btn btn-default" %></p>
+
+<hr>
+
+<p><%= link_to "Edit a List", edit_list_path(@list), id: "edit_list_link", class: "btn btn-success", remote: true %></p>
 <p><%= link_to "Delete List", list_path(@list),
                         :data => {:confirm => "Are you sure?",
                                        :method => "delete"},

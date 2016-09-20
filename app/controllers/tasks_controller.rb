@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  
+
   def new
     @list = List.find(params[:list_id])
     @task = @list.tasks.new
@@ -22,6 +22,10 @@ class TasksController < ApplicationController
   def edit
     @list = List.find(params[:list_id])
     @task = Task.find(params[:id])
+    respond_to do |format|
+      format.html { render :edit }
+      format.js
+    end
   end
 
   def update

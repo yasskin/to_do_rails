@@ -9,9 +9,13 @@ Things you may want to cover:
 
 * System dependencies
 
-* Configuration
+* Configuration / Bundle Gems
+```
+$ bundle install
+```
 
 * Database creation
+
 In a new terminal, start the postgres server:
 ```
 $ postgres
